@@ -3,7 +3,7 @@ import type { ConnectionGater } from "@libp2p/interface";
 /**
  * Returns a default connection gater implementation that allows everything
  */
-export function connectionGater(gater: ConnectionGater = {}) {
+export function connectionGater(gater: ConnectionGater = {}): ConnectionGater {
   const defaults: ConnectionGater = {
     denyDialPeer: async () => false,
     denyDialMultiaddr: async () => false,
